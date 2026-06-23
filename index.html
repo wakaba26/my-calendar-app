@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>カレンダー</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <!-- <h1>カレンダー</h1> -->
+    <div class="calendar-header">
+      <button id="prevMonth" class="nav-btn">‹</button>
+      <span id="currentMonth" class="month-title"></span>
+      <button id="nextMonth" class="nav-btn">›</button>
+      <button id="resetCalendar">リセット</button>
+      <button onclick="location.href='tasks.html'">タスク編集</button>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="calendar"></section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalDate"></h3>
+      <div id="modalHabitList"></div>
+
+      <div class="modal-buttons"></div>
+        <button id="modalResetDay">リセット</button>
+        <button id="modalClose">閉じる</button>
+        <button id="modalSave">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+   <script type="module" src="js/app.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,359 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+#monthNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+#calendar {
+  min-height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.day-cell {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.day-inner {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: -10px; /* 数字を少しだけ上に */
+  margin-bottom: 4px; /* タスクとの距離を確保 */
+}
+
+#habitSection {
+  padding: 20px;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#addHabitArea {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#addHabitArea input {
+  flex: 1;
+  padding: 8px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#habitSection {
+  margin-top: 24px;
+}
+
+#habitList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.habit-item {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.habit-item button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+#habitSection {
+  margin-top: 32px;
+  padding: 0 16px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#habitList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.habit-item {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.habit-item button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#modalClose {
+  background: #ccc;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#modalSave {
+  background: #ccc;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#modalResetDay {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 20px 0 12px;
+  padding: 0 12px;
+}
+
+.month-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.nav-btn {
+  background: #f2f2f7;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.task-list {
+  margin-top: -45px;
+  padding-left: 15px;   /* 左端に寄りすぎる問題を解消 */
+  font-size: 10px;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     /* 最大3行まで表示 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+
+.task-item {
+  white-space: nowrap;
+}
+
+/* タスク編集ページのタイトル */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* タスク一覧の枠 */
+#taskList {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* タスク1行のデザイン */
+.habit-item {
+  background: #fff;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-size: 15px;
+}
+
+/* 削除ボタン */
+.habit-item button {
+  background: #ff3b30;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* タスク追加エリア */
+.task-add {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.task-add input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.task-add button {
+  padding: 10px 14px;
+  background: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* 戻るボタン */
+button.back-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: #f2f2f7;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.back-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: #f2f2f7;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.login-box {
+  width: 90%;
+  max-width: 300px;
+  margin: 120px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
